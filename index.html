@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <link rel="stylesheet" href="./index.css">
+<body>
+
+<style>
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+
+<div id="Library">
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlFh4fAcPsDqjsH2
+Y7VWG1B5Ka-bdlovZ5X3O5UOYSrsKWbZBy" style="width:200px;height:200px;"   onmouseover="this.src='https://static.politico.com/dims4/default/132170c/2147483647/resize/1160x%3E/quality/90/?url=http%3A%2F%2Fs3-origin-images.politico.com%2Fnews%2F090403_norris_ap_297.jpg';" onmouseout="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlFh4fAcPsDqjsH2Y7VWG1B5Ka-bdlovZ5X3O5UOYSrsKWbZBy';" ng-mousemove="count = count + 1"></img>
+<h2>{{ count }}</h2>
+<button onclick="location.reload();">Refresh Page</button>
+
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="avatar.js"></script>
+<link rel="stylesheet" type="text/css" href="avatar.css">
+  <meta charset="utf-8">
+  <title>User Avatar Template</title>
+</head>
+<body>
+  <div ng-app='app' ng-controller='mainCtrl'>
+    <h1>Create new user</h1>
+
+    <form name='userForm' ng-submit='addNew(userForm)'>
+      <input placeholder='Name' ng-model='userForm.name'/>
+      <input placeholder='Image Url' ng-model='userForm.url'/>
+      <input placeholder='EmailAdress' ng-model='userForm.email'/>
+      <button type='submit'>Add New</button>
+    </form>
+    
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+});
+</script> 
+
+<script src="index.js"></script>
+
+</body>
+</html>
